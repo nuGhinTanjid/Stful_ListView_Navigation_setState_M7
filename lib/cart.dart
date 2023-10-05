@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Cart extends StatefulWidget {
-  const Cart({super.key});
+class Cart extends StatelessWidget {
+  final int totalproducts;
+   Cart({super.key, required this.totalproducts});
 
-  @override
-  State<Cart> createState() => _CartState();
-}
-
-class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,10 +11,8 @@ class _CartState extends State<Cart> {
         title: Text('Cart'),
         centerTitle: true,
       ),
-      body: Center(child: Text("Total Products: 5", style: TextStyle(
-        fontSize: 20
-      ) ,)),
-
+      body: Center(child: Text("Total Products: ${totalproducts}", style: TextStyle(fontSize: 20),)),
     );
   }
 }
+

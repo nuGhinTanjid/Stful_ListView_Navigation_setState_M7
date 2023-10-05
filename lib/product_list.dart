@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:module7_asssignment/cart.dart';
 
@@ -111,7 +109,7 @@ class _ProductListState extends State<ProductList> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Cart()
+                  builder: (_) => Cart(totalproducts: cnt)
               )
           );
         },
